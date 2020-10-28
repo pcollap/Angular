@@ -8,5 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule) //When AppModule is called, it calls app.module.ts which further calls the AppComponent based on the boostrap as follows −
   .catch(err => console.error(err));
