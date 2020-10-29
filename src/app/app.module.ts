@@ -8,13 +8,13 @@ import { NewCmpComponent } from './new-cmp/new-cmp.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NewCmpComponent
+    NewCmpComponent // here it is added in declarations and will behave as a child component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //for bootstrap the AppComponent the main app component is given.
 })
 export class AppModule { }
