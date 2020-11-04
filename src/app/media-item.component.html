@@ -1,0 +1,24 @@
+<!-- Property bindings use square brackets -->
+<!--square brackets tell angular evaluate an expression for that property-->
+<p class="mediaItem" [textContent]="name"></p>
+<!--not having square brackets displays nothing-->
+<p class="mediaItem" textContent="name"></p>
+<!--Using the data binding {{}} with textContent works-->
+<p class="mediaItem" textContent="Hi my name is {{ name }}"></p>
+<p>was watched? {{ wasWatched() }}</p>
+
+<h1>{{mediaItem.name}}</h1>
+
+<!-- Two ways to use ngIf structural directive, first uses template, second uses * to use directly on the contents  -->
+<ng-template [ngIf]="mediaItem.watchedOn">
+  <div>Watchedddd on {{mediaItem.watchedOn}}</div>
+</ng-template>
+<div *ngIf="mediaItem.watchedOn">Watched on {{mediaItem.watchedOn}}</div>
+<div>{{mediaItem.category}}</div>
+<div>{{mediaItem.year}} </div>
+
+
+
+<!-- Event bindings use parentheses -->
+<button (click)="onDelete()" class="delete">Remove</button>
+
